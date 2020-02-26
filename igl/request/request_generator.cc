@@ -167,6 +167,28 @@ void RequestGenerator::getProgress(float &val) {
 void RequestGenerator::generateAddress(uint64_t &off, uint64_t &len) {
   // This function generates address to access
   // based on I/O type, blocksize/align and offset/size
+
+  // TODO IGL:: ADD 
+  if (type == IO_ADD) {
+
+    off = io_count * blockalign;
+    len = blocksize;
+
+    // Limit range of address to [offset, offset + size)
+    while (off + len > size) {
+      if (off >= size) {
+        off -= size;
+      }
+      else {
+        // TODO is this correct?
+        off -= len;
+      }
+    }
+
+    off += offset;
+
+  }
+
   if (type == IO_RANDREAD || type == IO_RANDWRITE || type == IO_RANDRW) {
     off = randgen(randengine);  // randgen range: [offset, offset + size)
     off -= off % blockalign;
@@ -191,11 +213,12 @@ void RequestGenerator::generateAddress(uint64_t &off, uint64_t &len) {
   }
 }
 
+// TODO: IGL:: nextIOIsAdd Now this is random
 bool RequestGenerator::nextIOIsRead() {
   // This function determine next I/O is read or write
   // based on rwmixread
   // io_count should not zero
-  if (type == IO_READWRITE || type == IO_RANDRW) {
+  if (type == IO_READWRITE || type == IO_RANDRW || type == IO_ADD) {
     if (rwmixread > (float)read_count / io_count) {
       return true;
     }
@@ -206,6 +229,8 @@ bool RequestGenerator::nextIOIsRead() {
 
   return false;
 }
+
+
 
 void RequestGenerator::_submitIO(uint64_t) {
   BIL::BIO bio;

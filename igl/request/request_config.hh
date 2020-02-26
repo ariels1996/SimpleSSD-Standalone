@@ -43,6 +43,7 @@ typedef enum {
 } REQUEST_CONFIG;
 
 typedef enum {
+  IO_ADD,
   IO_READ,
   IO_WRITE,
   IO_RANDREAD,

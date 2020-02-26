@@ -79,6 +79,10 @@ bool RequestConfig::setConfig(const char *name, const char *value) {
     else if (strcasecmp(value, "randrw") == 0) {
       type = IO_RANDRW;
     }
+    //TODO: make adder
+    else if (strcasecmp(value, "add" ) == 0) {
+      type = IO_ADD;
+    }
     else {
       type = IO_TYPE_NUM;
     }

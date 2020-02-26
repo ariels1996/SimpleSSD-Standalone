@@ -226,14 +226,12 @@ int main(int argc, char *argv[]) {
   pInterface->initStats(statList);
 
   if (simConfig.readUint(CONFIG_GLOBAL, GLOBAL_LOG_PERIOD) > 0) {
-    statEvent = engine.allocateEvent([](uint64_t tick) {
+    statEvent = engine.allocateEvent(
+      [](uint64_t tick) {
       statistics(tick);
-
-      engine.scheduleEvent(
-          statEvent,
-          tick + simConfig.readUint(CONFIG_GLOBAL, GLOBAL_LOG_PERIOD) *
-                     1000000000ULL);
-    });
+      engine.scheduleEvent( statEvent, tick + simConfig.readUint(CONFIG_GLOBAL, GLOBAL_LOG_PERIOD) * 1000000000ULL);
+      } // event function
+    );
     engine.scheduleEvent(
         statEvent,
         simConfig.readUint(CONFIG_GLOBAL, GLOBAL_LOG_PERIOD) * 1000000000ULL);
