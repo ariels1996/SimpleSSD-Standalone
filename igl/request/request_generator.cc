@@ -230,6 +230,18 @@ bool RequestGenerator::nextIOIsRead() {
   return false;
 }
 
+bool RequestGenerator::nextIOIsAdd() {
+  // This function determine next I/O is read or write
+  // based on rwmixread
+  // io_count should not zero
+  if (type == IO_ADD) {
+    return true;
+  }
+  
+
+  return false;
+}
+
 
 
 void RequestGenerator::_submitIO(uint64_t) {
@@ -247,6 +259,10 @@ void RequestGenerator::_submitIO(uint64_t) {
   }
   else {
     bio.type = BIL::BIO_WRITE;
+  }
+
+  if (nextIOIsAdd()) {
+    bio.type = BIL::BIO_ADD;
   }
 
   io_submitted += bio.length;

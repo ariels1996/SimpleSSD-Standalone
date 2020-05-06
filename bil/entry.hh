@@ -41,6 +41,8 @@ enum BIO_TYPE : uint8_t {
   BIO_FLUSH,
   BIO_TRIM,
   BIO_NUM,
+  //TODO BIO_ADD
+  BIO_ADD,
 };
 
 typedef struct _BIO {
