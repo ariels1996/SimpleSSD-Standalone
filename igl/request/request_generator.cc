@@ -218,7 +218,7 @@ bool RequestGenerator::nextIOIsRead() {
   // This function determine next I/O is read or write
   // based on rwmixread
   // io_count should not zero
-  if (type == IO_READWRITE || type == IO_RANDRW || type == IO_ADD) {
+  if (type == IO_READWRITE || type == IO_RANDRW) {
     if (rwmixread > (float)read_count / io_count) {
       return true;
     }
