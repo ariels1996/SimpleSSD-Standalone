@@ -19,7 +19,7 @@
 
 #include "sil/none/none.hh"
 
-#include "simplessd/util/algorithm.hh"
+#include "SimpleSSD/util/algorithm.hh"
 
 namespace SIL {
 

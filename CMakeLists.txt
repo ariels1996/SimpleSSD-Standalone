@@ -31,20 +31,20 @@ set(DRAMPOWER_SOURCE_DIR
 )
 
 # Check SimpleSSD is valid
-if (NOT EXISTS "${PROJECT_SOURCE_DIR}/simplessd/CMakeLists.txt")
+if (NOT EXISTS "${PROJECT_SOURCE_DIR}/SimpleSSD/CMakeLists.txt")
   message(FATAL_ERROR "Failed to find SimpleSSD. \
 Check you initialized submodules.")
 endif ()
 
 # Add subproject
-add_subdirectory(${PROJECT_SOURCE_DIR}/simplessd
-  ${CMAKE_BINARY_DIR}/simplessd
+add_subdirectory(${PROJECT_SOURCE_DIR}/SimpleSSD
+  ${CMAKE_BINARY_DIR}/SimpleSSD
 )
 
 # Set include directories
 include_directories(
   ${PROJECT_SOURCE_DIR}
-  ${PROJECT_SOURCE_DIR}/simplessd
+  ${PROJECT_SOURCE_DIR}/SimpleSSD
   ${DRAMPOWER_SOURCE_DIR}
 )
 

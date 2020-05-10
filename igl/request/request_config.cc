@@ -19,7 +19,7 @@
 
 #include "igl/request/request_config.hh"
 
-#include "simplessd/sim/trace.hh"
+#include "SimpleSSD/sim/trace.hh"
 #include "util/convert.hh"
 
 namespace IGL {

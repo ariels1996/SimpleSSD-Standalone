@@ -22,7 +22,7 @@
 #ifndef __SIM_GLOBAL_CONFIG__
 #define __SIM_GLOBAL_CONFIG__
 
-#include "simplessd/sim/base_config.hh"
+#include "SimpleSSD/sim/base_config.hh"
 
 typedef enum {
   GLOBAL_SIM_MODE,

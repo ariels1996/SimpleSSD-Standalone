@@ -19,9 +19,9 @@
 
 #include "sil/nvme/nvme.hh"
 
-#include "simplessd/hil/nvme/controller.hh"
-#include "simplessd/hil/nvme/def.hh"
-#include "simplessd/util/algorithm.hh"
+#include "SimpleSSD/hil/nvme/controller.hh"
+#include "SimpleSSD/hil/nvme/def.hh"
+#include "SimpleSSD/util/algorithm.hh"
 
 namespace SIL {
 

@@ -28,7 +28,7 @@
 #include <thread>
 #include <unordered_map>
 
-#include "simplessd/sim/simulator.hh"
+#include "SimpleSSD/sim/simulator.hh"
 #include "util/stopwatch.hh"
 
 class Engine : public SimpleSSD::Simulator {

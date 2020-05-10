@@ -23,7 +23,7 @@
 #include <cstring>
 
 #include "sil/nvme/prp.hh"
-#include "simplessd/sim/trace.hh"
+#include "SimpleSSD/sim/trace.hh"
 
 namespace SIL {
 

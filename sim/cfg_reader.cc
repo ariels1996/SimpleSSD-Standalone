@@ -19,8 +19,8 @@
 
 #include "sim/cfg_reader.hh"
 
-#include "simplessd/sim/base_config.hh"
-#include "simplessd/sim/trace.hh"
+#include "SimpleSSD/sim/base_config.hh"
+#include "SimpleSSD/sim/trace.hh"
 
 #ifdef _MSC_VER
 #define strcasecmp _stricmp

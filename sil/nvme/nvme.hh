@@ -28,8 +28,8 @@
 #include "bil/interface.hh"
 #include "sil/nvme/prp.hh"
 #include "sil/nvme/queue.hh"
-#include "simplessd/hil/nvme/interface.hh"
-#include "simplessd/util/interface.hh"
+#include "SimpleSSD/hil/nvme/interface.hh"
+#include "SimpleSSD/util/interface.hh"
 
 #define QUEUE_ENTRY_ADMIN 256
 #define QUEUE_ENTRY_IO 1024

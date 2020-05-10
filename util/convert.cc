@@ -21,7 +21,7 @@
 
 #include <regex>
 
-#include "simplessd/sim/trace.hh"
+#include "SimpleSSD/sim/trace.hh"
 
 const std::regex regexInteger("(\\d+)([kKmMgGtTpP]?)",
                               std::regex_constants::ECMAScript);

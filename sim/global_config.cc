@@ -19,7 +19,7 @@
 
 #include "sim/global_config.hh"
 
-#include "simplessd/sim/trace.hh"
+#include "SimpleSSD/sim/trace.hh"
 #include "util/convert.hh"
 
 const char NAME_MODE[] = "Mode";

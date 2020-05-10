@@ -19,7 +19,7 @@
 
 #include "sim/engine.hh"
 
-#include "simplessd/sim/trace.hh"
+#include "SimpleSSD/sim/trace.hh"
 
 Engine::Engine()
     : SimpleSSD::Simulator(),

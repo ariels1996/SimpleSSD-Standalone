@@ -25,7 +25,7 @@
 #include <functional>
 
 #include "bil/entry.hh"
-#include "simplessd/sim/statistics.hh"
+#include "SimpleSSD/sim/statistics.hh"
 
 namespace BIL {
 

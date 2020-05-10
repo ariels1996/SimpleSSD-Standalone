@@ -22,8 +22,8 @@
 #include <cstdlib>
 #include <cstring>
 
-#include "simplessd/sim/trace.hh"
-#include "simplessd/util/algorithm.hh"
+#include "SimpleSSD/sim/trace.hh"
+#include "SimpleSSD/util/algorithm.hh"
 
 namespace SIL {
 

@@ -19,7 +19,7 @@
 
 #include "igl/trace/trace_config.hh"
 
-#include "simplessd/sim/trace.hh"
+#include "SimpleSSD/sim/trace.hh"
 
 namespace IGL {
 

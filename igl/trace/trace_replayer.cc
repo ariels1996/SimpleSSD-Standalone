@@ -19,8 +19,8 @@
 
 #include "igl/trace/trace_replayer.hh"
 
-#include "simplessd/sim/trace.hh"
-#include "simplessd/util/algorithm.hh"
+#include "SimpleSSD/sim/trace.hh"
+#include "SimpleSSD/util/algorithm.hh"
 
 namespace IGL {
 

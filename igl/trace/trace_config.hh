@@ -22,7 +22,7 @@
 #ifndef __IGL_TRACE_CONFIG__
 #define __IGL_TRACE_CONFIG__
 
-#include "simplessd/sim/base_config.hh"
+#include "SimpleSSD/sim/base_config.hh"
 
 namespace IGL {
 

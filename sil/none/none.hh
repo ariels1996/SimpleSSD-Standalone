@@ -23,7 +23,7 @@
 #define __DRIVERS_NONE__
 
 #include "bil/interface.hh"
-#include "simplessd/hil/hil.hh"
+#include "SimpleSSD/hil/hil.hh"
 
 namespace SIL {
 

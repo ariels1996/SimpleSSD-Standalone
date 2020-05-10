@@ -28,7 +28,7 @@
 #include "sil/nvme/nvme.hh"
 #include "sim/engine.hh"
 #include "sim/signal.hh"
-#include "simplessd/util/simplessd.hh"
+#include "SimpleSSD/util/simplessd.hh"
 #include "util/print.hh"
 
 // Global objects
