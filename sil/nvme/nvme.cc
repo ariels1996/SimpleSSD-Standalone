@@ -405,6 +405,15 @@ void Driver::submitIO(BIL::BIO &bio) {
 
     prp->writeData(0, 16, data);
   }
+  else if (bio.type == BIL::BIO_ADD) {
+    cmd[0] = SimpleSSD::HIL::NVMe::OPCODE_ADD;  // CID, FUSE, OPC
+    cmd[10] = (uint32_t)slba;
+    cmd[11] = slba >> 32;
+    cmd[12] = nlb - 1;  // LR, FUA, PRINFO, NLB
+
+    prp = new PRP(bio.length);
+    prp->getPointer(*(uint64_t *)(cmd + 6), *(uint64_t *)(cmd + 8));  // DPTR
+  }
 
   submitCommand(1, (uint8_t *)cmd, callback,
                 new IOWrapper(bio.id, prp, bio.callback));

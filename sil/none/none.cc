@@ -84,6 +84,8 @@ void Driver::submitIO(BIL::BIO &bio) {
     case BIL::BIO_TRIM:
       pHIL->trim(req);
       break;
+    case BIL::BIO_ADD:
+      pHIL->add(req);
     default:
       break;
   }
